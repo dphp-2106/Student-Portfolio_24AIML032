@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const navStyle = {
     display: 'flex', gap: '24px', listStyle: 'none', margin: 0, padding: 0
@@ -13,10 +14,10 @@ function Header({ name }) {
             <span style={{ fontWeight: 600, fontSize: '18px', color: 'var(--text-h)' }}>{name}</span>
             <nav>
                 <ul style={navStyle}>
-                    <li><a href="#home" style={linkStyle}>Home</a></li>
-                    <li><a href="#about" style={linkStyle}>About</a></li>
-                    <li><a href="#skills" style={linkStyle}>Skills</a></li>
-                    <li><a href="#contact" style={linkStyle}>Contact</a></li>
+                    <li><Link to="/" style={linkStyle}>Home</Link></li>
+                    <li><Link to="/about" style={linkStyle}>About</Link></li>
+                    <li><Link to="/skills" style={linkStyle}>Skills</Link></li>
+                    <li><Link to="/contact" style={linkStyle}>Contact</Link></li>
                 </ul>
             </nav>
         </header>

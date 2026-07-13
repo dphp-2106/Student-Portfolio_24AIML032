@@ -1,3 +1,4 @@
+import { Routes, Route } from 'react-router-dom'
 import './App.css'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
@@ -15,10 +16,12 @@ function App() {
   return (
     <>
       <Header name={studentdetails.name} />
-      <Home name={studentdetails.name} />
-      <About about={studentdetails.about} />
-      <Skill skill={studentdetails.skill} />
-      <Contact />
+      <Routes>
+        <Route path="/" element={<Home name={studentdetails.name} />} />
+        <Route path="/about" element={<About about={studentdetails.about} />} />
+        <Route path="/skills" element={<Skill skill={studentdetails.skill} />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
       <Footer />
     </>
   )

@@ -3,7 +3,7 @@ import React from "react";
 function skill(props) {
     const {skill} = props
     return (
-        <section id="skills" style={{ padding: '48px 32px', borderTop: '1px solid var(--border)' }}>
+        <section style={{ padding: '48px 32px' }}>
             <h2>Skills</h2>
             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', gap: '12px', flexWrap: 'wrap', justifyContent: 'center' }}>
                 {skill.map((s, i) => (
