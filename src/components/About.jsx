@@ -1,11 +1,12 @@
 import React from "react";
 
-function about() {
+function about(props) {
     const {about} = props
     return (
-        <div>
-            <h1>{about}</h1>
-        </div>
+        <section id="about" style={{ padding: '48px 32px', borderTop: '1px solid var(--border)' }}>
+            <h2>About Me</h2>
+            <p>{about}</p>
+        </section>
     )
 }
 export default about
